@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from "@angular/router";
 
 
@@ -9,10 +9,9 @@ export type ButtonVariant =
   | 'flat'
   | 'stroked';
 
-
-
 @Component({
   selector: 'app-button',
+  standalone: true,
   imports: [MatButtonModule, RouterLink],
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss'

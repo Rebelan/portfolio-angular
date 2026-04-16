@@ -1,1 +1,29 @@
-<p>navbar works!</p>
+<header class="navbar">
+  <div class="navbar-left">
+    <a class="brand" routerLink="/">Abel Portfolio</a>
+  </div>
+
+  <nav class="navbar-center">
+
+    @if (isLogged()) {
+      <a routerLink="/about" routerLinkActive="active">Sobre mí</a>
+      <a routerLink="/videojuegos" routerLinkActive="active">Videojuegos</a>
+      <a routerLink="/libros" routerLinkActive="active">Libros</a>
+      <a routerLink="/peliculas" routerLinkActive="active">Películas</a>
+      <a routerLink="/series" routerLinkActive="active">Series</a>
+    }
+  </nav>
+
+  <div class="navbar-right">
+    @if (isLogged()) {
+      <span class="welcome">Hola, {{ userName() }}</span>
+      <button mat-raised-button color="primary" (click)="logout()">
+        Cerrar sesión
+      </button>
+    } @else {
+      <a mat-raised-button color="primary" routerLink="/login">
+        Iniciar sesión
+      </a>
+    }
+  </div>
+</header>
