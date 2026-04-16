@@ -1,0 +1,27 @@
+@switch (variant()) {
+
+  @case ('basic') {
+    <a mat-button [routerLink]="link()">
+      {{ label() }}
+    </a>
+  }
+
+  @case ('raised') {
+    <a mat-raised-button [routerLink]="link()">
+      {{ label() }}
+    </a>
+  }
+
+  @case ('flat') {
+    <a mat-flat-button [routerLink]="link()">
+      {{ label() }}
+    </a>
+  }
+
+  @case ('stroked') {
+    <a mat-stroked-button [routerLink]="link()">
+      {{ label() }}
+    </a>
+  }
+
+}
