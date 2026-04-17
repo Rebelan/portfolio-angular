@@ -1,0 +1,73 @@
+<section class="books-page">
+  <div class="books-hero">
+    <p class="books-eyebrow">Colección personal</p>
+    <h1 class="books-title">Libros</h1>
+    <p class="books-description">
+      Una selección de libros que he leído, que estoy leyendo o que todavía tengo pendientes.
+    </p>
+  </div>
+
+  <div class="filters-card">
+    <div class="filters">
+      <div class="filter-group">
+        <label for="name">Buscar por título</label>
+        <input
+          id="name"
+          type="text"
+          placeholder="Ej: Dune"
+          [value]="nameFilter()"
+          (input)="nameFilter.set($any($event.target).value)"
+        />
+      </div>
+
+      <div class="filter-group">
+        <label for="category">Filtrar por categoría</label>
+        <select
+          id="category"
+          [value]="categoryFilter()"
+          (change)="categoryFilter.set($any($event.target).value)"
+        >
+          <option value="">Todos</option>
+          @for (category of categories(); track category) {
+            <option [value]="category">{{ category }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="filter-actions">
+        <button type="button" (click)="resetFilters()">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-card">
+    @if (filteredBooks().length > 0) {
+      <table class="books-table">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Categoría</th>
+            <th>Autor</th>
+            <th>Año</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (book of filteredBooks(); track book.id) {
+            <tr class="book-row">
+              <td>{{ book.title }}</td>
+              <td>{{ book.category }}</td>
+              <td>{{ book.author }}</td>
+              <td>{{ book.year }}</td>
+              <td>{{ book.status }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    } @else {
+      <div class="empty-state">
+        <p>No se encontraron libros con esos filtros.</p>
+      </div>
+    }
+  </div>
+</section>

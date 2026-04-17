@@ -16,7 +16,13 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/about/about.component')
     },
     {
-        path: '**',
-        redirectTo: ''
-    }
+        path: 'videojuegos',
+        canActivate: [authGuard],
+        loadComponent: () => import('./pages/videojuegos/videojuegos.component')
+    },
+    {
+        path: 'libros',
+        canActivate: [authGuard],
+        loadComponent: () => import('./pages/libros/libros.component')
+    },
 ];

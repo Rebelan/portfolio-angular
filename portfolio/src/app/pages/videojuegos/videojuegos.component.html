@@ -1,0 +1,73 @@
+<section class="games-page">
+  <div class="games-hero">
+    <p class="games-eyebrow">Colección personal</p>
+    <h1 class="games-title">Videojuegos</h1>
+    <p class="games-description">
+      Una selección de juegos que he disfrutado, terminado o que todavía tengo pendientes.
+    </p>
+  </div>
+
+  <div class="filters-card">
+    <div class="filters">
+      <div class="filter-group">
+        <label for="name">Buscar por nombre</label>
+        <input
+          id="name"
+          type="text"
+          placeholder="Ej: Elden Ring"
+          [value]="nameFilter()"
+          (input)="nameFilter.set($any($event.target).value)"
+        />
+      </div>
+
+      <div class="filter-group">
+        <label for="genre">Filtrar por género</label>
+        <select
+          id="genre"
+          [value]="genreFilter()"
+          (change)="genreFilter.set($any($event.target).value)"
+        >
+          <option value="">Todos</option>
+          @for (genre of genres(); track genre) {
+            <option [value]="genre">{{ genre }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="filter-actions">
+        <button type="button" (click)="resetFilters()">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-card">
+    @if (filteredGames().length > 0) {
+      <table class="games-table">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Género</th>
+            <th>Plataforma</th>
+            <th>Año</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (game of filteredGames(); track game.id) {
+            <tr class="game-row">
+              <td>{{ game.title }}</td>
+              <td>{{ game.genre }}</td>
+              <td>{{ game.platform }}</td>
+              <td>{{ game.year }}</td>
+              <td>{{ game.status }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    } @else {
+      <div class="empty-state">
+        <p>No se encontraron videojuegos con esos filtros.</p>
+      </div>
+    }
+  </div>
+</section>
