@@ -1,0 +1,257 @@
+.series-page {
+  min-height: 100dvh;
+  padding: 5rem 2rem 6rem;
+  background:
+    radial-gradient(circle at top left, rgba(168, 85, 247, 0.08), transparent 30%),
+    linear-gradient(180deg, #020617 0%, #0f172a 100%);
+  color: #f8fafc;
+}
+
+.series-hero {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.series-eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.24);
+  color: #ddd6fe;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+
+.series-title {
+  font-size: clamp(2.3rem, 5vw, 3.8rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.series-description {
+  max-width: 65ch;
+  margin: 0 auto;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.carousel-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 24px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-window {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.series-slide {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.series-poster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.series-poster img {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 2 / 3;
+  display: block;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.series-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.series-meta-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.series-badge {
+  display: inline-block;
+  padding: 0.38rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.24);
+  color: #ddd6fe;
+  font-size: 0.9rem;
+}
+
+.series-year {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.series-info h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.series-creator,
+.series-seasons,
+.series-status {
+  color: #cbd5e1;
+  margin-bottom: 0.35rem;
+}
+
+.series-description-text {
+  margin-top: 1rem;
+  color: #e2e8f0;
+  line-height: 1.8;
+  max-width: 60ch;
+}
+
+.series-counter {
+  margin-top: 1.5rem;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.carousel-controls {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-btn {
+  border: none;
+  border-radius: 10px;
+  background: #7c3aed;
+  color: white;
+  padding: 0.85rem 1.1rem;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #8b5cf6;
+  transform: translateY(-1px);
+}
+
+.nav-btn:active {
+  transform: translateY(0);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.dot:hover {
+  background: rgba(221, 214, 254, 0.7);
+}
+
+.dot.active {
+  background: #ddd6fe;
+  transform: scale(1.15);
+}
+
+@media (max-width: 900px) {
+  .series-slide {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .series-poster {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .series-info {
+    text-align: center;
+  }
+
+  .series-meta-top {
+    justify-content: center;
+  }
+
+  .series-description-text {
+    max-width: 100%;
+  }
+
+  .carousel-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .series-page {
+    padding: 4rem 1.25rem 5rem;
+  }
+
+  .carousel-shell {
+    padding: 1rem;
+    border-radius: 20px;
+  }
+
+  .series-slide {
+    padding: 0.5rem;
+  }
+
+  .series-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .series-description-text {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}

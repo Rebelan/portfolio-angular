@@ -1,0 +1,67 @@
+<section class="series-page">
+  <div class="series-hero">
+    <p class="series-eyebrow">Colección personal</p>
+    <h1 class="series-title">Series</h1>
+    <p class="series-description">
+      Una selección de series que me han marcado por su historia, personajes,
+      dirección o atmósfera. Una parte importante de mis referencias visuales y narrativas.
+    </p>
+  </div>
+
+  <div class="carousel-shell">
+    <div class="carousel-window">
+      <div class="carousel-track" [style.transform]="trackTransform()">
+        @for (item of series(); track item.id) {
+          <article class="series-slide">
+            <div class="series-poster">
+              <img [src]="item.poster" [alt]="'Portada de ' + item.title" />
+            </div>
+
+            <div class="series-info">
+              <div class="series-meta-top">
+                <span class="series-badge">{{ item.genre }}</span>
+                <span class="series-year">{{ item.year }}</span>
+              </div>
+
+              <h2>{{ item.title }}</h2>
+
+              <p class="series-creator">Creada por {{ item.creator }}</p>
+              <p class="series-seasons">{{ item.seasons }}</p>
+              <p class="series-status">{{ item.status }}</p>
+
+              <p class="series-description-text">
+                {{ item.description }}
+              </p>
+
+              <p class="series-counter">
+                {{ currentIndex() + 1 }} / {{ totalSlides() }}
+              </p>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+
+    <div class="carousel-controls">
+      <button type="button" class="nav-btn" (click)="prev()">
+        Anterior
+      </button>
+
+      <div class="carousel-dots">
+        @for (item of series(); track item.id; let i = $index) {
+          <button
+            type="button"
+            class="dot"
+            [class.active]="currentIndex() === i"
+            (click)="goTo(i)"
+            [attr.aria-label]="'Ir a ' + item.title"
+          ></button>
+        }
+      </div>
+
+      <button type="button" class="nav-btn" (click)="next()">
+        Siguiente
+      </button>
+    </div>
+  </div>
+</section>
