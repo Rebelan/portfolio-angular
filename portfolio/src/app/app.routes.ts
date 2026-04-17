@@ -25,4 +25,9 @@ export const routes: Routes = [
         canActivate: [authGuard],
         loadComponent: () => import('./pages/libros/libros.component')
     },
+    {
+        path: 'peliculas',
+        canActivate: [authGuard],
+        loadComponent: () => import('./pages/peliculas/peliculas.component')
+    },
 ];
