@@ -1,18 +1,38 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, inject, signal } from '@angular/core';
 import { gsap } from 'gsap';
 import { ButtonComponent } from '../../components/shared/button/button.component';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { RouterLink } from '@angular/router';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [ButtonComponent, RouterLink],
+  imports: [ButtonComponent, RouterLink, TranslatePipe],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
 })
 export default class LandingComponent implements AfterViewInit {
+
+
+  private translate = inject(TranslateService);
+
+  currentLang = signal(localStorage.getItem('lang') || 'es');
+
+  constructor() {
+    const savedLang = localStorage.getItem('lang') || 'es';
+    this.currentLang.set(savedLang);
+    this.translate.use(savedLang).subscribe();
+  }
+
+  changeLanguage(lang: 'es' | 'en' | 'pt'): void {
+    this.currentLang.set(lang);
+    this.translate.use(lang).subscribe(() => {
+      localStorage.setItem('lang', lang);
+    });
+  }
+
 
   ngAfterViewInit(): void {
     gsap.registerPlugin(ScrollTrigger);

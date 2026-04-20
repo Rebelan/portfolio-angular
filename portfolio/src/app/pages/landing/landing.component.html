@@ -1,10 +1,45 @@
 <section class="landing">
 
-
   <div class="landing-bg">
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
     <div class="grid-overlay"></div>
+  </div>
+
+  
+<div class="landing-lang-switcher">
+    <button
+      type="button"
+      class="lang-flag"
+      [class.active]="currentLang() === 'es'"
+      (click)="changeLanguage('es')"
+      aria-label="Cambiar idioma a español"
+    >
+      <span class="flag">🇪🇸</span>
+      <span class="code">ES</span>
+    </button>
+
+    <button
+      type="button"
+      class="lang-flag"
+      [class.active]="currentLang() === 'en'"
+      (click)="changeLanguage('en')"
+      aria-label="Switch language to English"
+    >
+      <span class="flag">🇬🇧</span>
+      <span class="code">EN</span>
+    </button>
+
+    <button
+      type="button"
+      class="lang-flag"
+      [class.active]="currentLang() === 'pt'"
+      (click)="changeLanguage('pt')"
+      aria-label="Mudar idioma para português"
+    >
+      <span class="flag">🇵🇹</span>
+      <span class="code">PT</span>
+    </button>
   </div>
 
   <div class="landing-content">
@@ -12,32 +47,30 @@
     <div class="hero-card">
 
       <p class="hero-eyebrow">
-        Portfolio personal · Angular Developer
+        {{ 'LANDING.EYEBROW' | translate }}
       </p>
 
       <h1 class="hero-title">
-        Abel Constantino
+        {{ 'LANDING.TITLE' | translate }}
       </h1>
 
       <h2 class="hero-subtitle">
-        Frontend Developer especializandose en Angular
+        {{ 'LANDING.SUBTITLE' | translate }}
       </h2>
 
       <p class="hero-description">
-        Bienvenido a mi portfolio personal. Aquí encontrarás información sobre mí,
-        mis intereses y una colección interactiva de videojuegos, libros,
-        películas y series que forman parte de mi mundo.
+        {{ 'LANDING.DESCRIPTION' | translate }}
       </p>
 
       <div class="hero-actions">
         <app-button
-          label="Iniciar sesión"
+          [label]="'LANDING.LOGIN' | translate"
           link="/login"
           variant="raised">
         </app-button>
 
         <app-button
-          label="Explorar portfolio"
+          [label]="'LANDING.EXPLORE' | translate"
           link="/about"
           variant="stroked">
         </app-button>
@@ -54,23 +87,29 @@
     </div>
 
     <div class="scroll-indicator">
-      <span>Scroll</span>
+      <span>{{ 'LANDING.SCROLL' | translate }}</span>
       <div class="scroll-line"></div>
     </div>
 
   </div>
 </section>
 
+
 <section class="portfolio-preview">
 
   <div class="preview-container">
 
     <div class="preview-heading">
-      <p class="preview-eyebrow">Qué encontrarás</p>
-      <h2 class="preview-title">Explora mi universo personal</h2>
+      <p class="preview-eyebrow">
+        {{ 'LANDING.PREVIEW_EYEBROW' | translate }}
+      </p>
+
+      <h2 class="preview-title">
+        {{ 'LANDING.PREVIEW_TITLE' | translate }}
+      </h2>
+
       <p class="preview-description">
-        Este portfolio no solo muestra quién soy, sino también parte de mis gustos,
-        aficiones y referencias culturales a través de distintas colecciones.
+        {{ 'LANDING.PREVIEW_DESCRIPTION' | translate }}
       </p>
     </div>
 
@@ -78,42 +117,38 @@
 
       <article class="preview-card">
         <div class="card-icon">🎮</div>
-        <h3>Videojuegos</h3>
-        <p>
-          Una tabla con los juegos que he disfrutado, organizada por género y
-          filtrable por nombre y categoría.
-        </p>
-        <a routerLink="/videojuegos" class="card-link">Ver videojuegos</a>
+        <h3>{{ 'LANDING.CARDS.GAMES_TITLE' | translate }}</h3>
+        <p>{{ 'LANDING.CARDS.GAMES_TEXT' | translate }}</p>
+        <a routerLink="/videojuegos" class="card-link">
+          {{ 'LANDING.CARDS.GAMES_LINK' | translate }}
+        </a>
       </article>
 
       <article class="preview-card">
         <div class="card-icon">📚</div>
-        <h3>Libros</h3>
-        <p>
-          Una selección de lecturas con filtros por nombre y categoría para
-          explorar mejor mis gustos literarios.
-        </p>
-        <a routerLink="/libros" class="card-link">Ver libros</a>
+        <h3>{{ 'LANDING.CARDS.BOOKS_TITLE' | translate }}</h3>
+        <p>{{ 'LANDING.CARDS.BOOKS_TEXT' | translate }}</p>
+        <a routerLink="/libros" class="card-link">
+          {{ 'LANDING.CARDS.BOOKS_LINK' | translate }}
+        </a>
       </article>
 
       <article class="preview-card">
         <div class="card-icon">🎬</div>
-        <h3>Películas</h3>
-        <p>
-          Películas que me han marcado o entretenido, con filtros pensados para
-          navegar por géneros y títulos.
-        </p>
-        <a routerLink="/peliculas" class="card-link">Ver películas</a>
+        <h3>{{ 'LANDING.CARDS.MOVIES_TITLE' | translate }}</h3>
+        <p>{{ 'LANDING.CARDS.MOVIES_TEXT' | translate }}</p>
+        <a routerLink="/peliculas" class="card-link">
+          {{ 'LANDING.CARDS.MOVIES_LINK' | translate }}
+        </a>
       </article>
 
       <article class="preview-card">
         <div class="card-icon">📺</div>
-        <h3>Series</h3>
-        <p>
-          Series que sigo o he terminado, también organizadas para que se puedan
-          consultar fácilmente.
-        </p>
-        <a routerLink="/series" class="card-link">Ver series</a>
+        <h3>{{ 'LANDING.CARDS.SERIES_TITLE' | translate }}</h3>
+        <p>{{ 'LANDING.CARDS.SERIES_TEXT' | translate }}</p>
+        <a routerLink="/series" class="card-link">
+          {{ 'LANDING.CARDS.SERIES_LINK' | translate }}
+        </a>
       </article>
 
     </div>
