@@ -12,7 +12,6 @@
     "LOGOUT": "Sair",
     "WELCOME": "Olá"
   },
-
   "LANDING": {
     "EYEBROW": "Portfólio pessoal · Desenvolvedor Angular",
     "TITLE": "Abel Constantino",
@@ -28,55 +27,48 @@
       "GAMES_TITLE": "Videogames",
       "GAMES_TEXT": "Uma tabela com os jogos que aproveitei, organizada por género e filtrável por nome e categoria.",
       "GAMES_LINK": "Ver videogames",
-
       "BOOKS_TITLE": "Livros",
       "BOOKS_TEXT": "Uma seleção de leituras com filtros por nome e categoria para explorar melhor os meus gostos literários.",
       "BOOKS_LINK": "Ver livros",
-
       "MOVIES_TITLE": "Filmes",
       "MOVIES_TEXT": "Filmes que me marcaram ou entretiveram, apresentados em formato visual de carrossel.",
       "MOVIES_LINK": "Ver filmes",
-
       "SERIES_TITLE": "Séries",
       "SERIES_TEXT": "Séries que acompanho ou já terminei, também apresentadas em formato visual de carrossel.",
       "SERIES_LINK": "Ver séries"
     }
   },
-
   "LOGIN": {
     "EYEBROW": "Acesso privado",
     "TITLE": "Entrar",
-    "DESCRIPTION": "Introduce as tuas credenciais para aceder ao portfólio.",
+    "DESCRIPTION": "Introduz as tuas credenciais para aceder ao portfólio.",
     "EMAIL": "Email",
     "PASSWORD": "Palavra-passe",
     "EMAIL_PLACEHOLDER": "admin@gmail.com",
     "PASSWORD_PLACEHOLDER": "••••••••",
     "SUBMIT": "Entrar",
     "ERROR_INVALID": "Credenciais incorretas",
-    "ERROR_SERVER": "Erro ao ligar ao servidor"
+    "ERROR_SERVER": "Erro ao ligar ao servidor",
+    "ERROR_EMAIL": "Introduce um email válido",
+    "ERROR_PASSWORD": "A palavra-passe é obrigatória"
   },
-
   "ABOUT": {
     "EYEBROW": "Sobre mim",
     "TITLE": "Conhece-me um pouco melhor",
     "INTRO": "Esta secção resume quem sou, como comecei no mundo da tecnologia e o que me motiva a continuar a aprender e a criar projetos.",
-
     "CARD1_NUMBER": "01",
     "CARD1_TITLE": "Quem sou",
     "CARD1_TEXT1": "Sou Abel Constantino e interesso-me especialmente pelo desenvolvimento frontend, pela criação de interfaces modernas e pela possibilidade de construir experiências interativas que misturam design e funcionalidade.",
     "CARD1_TEXT2": "Gosto de aprender novas tecnologias e de melhorar constantemente a forma como estruturo aplicações, escrevo código mais limpo e crio projetos que reflitam tanto a parte técnica como a parte pessoal.",
-
     "CARD2_NUMBER": "02",
     "CARD2_TITLE": "O meu caminho na tecnologia",
     "CARD2_TEXT1": "Pouco a pouco fui-me interessando pelo desenvolvimento web e descobri que gostava especialmente da parte visual das aplicações: maquetização, componentes reutilizáveis, animações e organização de interfaces.",
     "CARD2_TEXT2": "Angular permitiu-me trabalhar conceitos como serviços, guards, interceptors, formulários, internacionalização e estado reativo com observables e signals, o que me ajuda a construir projetos muito mais completos.",
-
     "CARD3_NUMBER": "03",
     "CARD3_TITLE": "O que quero transmitir com este portfólio",
     "CARD3_TEXT1": "Este portfólio não pretende ser apenas uma apresentação, mas também uma forma de mostrar como penso e como organizo um projeto Angular real: autenticação, rotas protegidas, design coerente, filtros, componentes partilhados e uma experiência visual cuidada.",
     "CARD3_TEXT2": "Também reflete parte dos meus hobbies e gostos pessoais, como os videogames, os livros, os filmes e as séries, para que o projeto tenha uma identidade mais própria e próxima."
   },
-
   "GAMES": {
     "EYEBROW": "Coleção pessoal",
     "TITLE": "Videogames",
@@ -95,7 +87,6 @@
       "STATUS": "Estado"
     }
   },
-
   "BOOKS": {
     "EYEBROW": "Coleção pessoal",
     "TITLE": "Livros",
@@ -114,7 +105,6 @@
       "STATUS": "Estado"
     }
   },
-
   "MOVIES": {
     "EYEBROW": "Coleção pessoal",
     "TITLE": "Filmes",
@@ -123,7 +113,6 @@
     "NEXT": "Seguinte",
     "DIRECTOR": "Dirigido por"
   },
-
   "SERIES": {
     "EYEBROW": "Coleção pessoal",
     "TITLE": "Séries",
@@ -132,7 +121,6 @@
     "NEXT": "Seguinte",
     "CREATOR": "Criada por"
   },
-
   "CONTACT": {
     "EYEBROW": "Contato",
     "TITLE": "Vamos falar",

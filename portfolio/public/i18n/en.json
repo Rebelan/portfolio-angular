@@ -12,7 +12,6 @@
     "LOGOUT": "Logout",
     "WELCOME": "Hello"
   },
-
   "LANDING": {
     "EYEBROW": "Personal portfolio · Angular Developer",
     "TITLE": "Abel Constantino",
@@ -28,21 +27,17 @@
       "GAMES_TITLE": "Games",
       "GAMES_TEXT": "A table with the games I have enjoyed, organized by genre and filterable by name and category.",
       "GAMES_LINK": "View games",
-
       "BOOKS_TITLE": "Books",
       "BOOKS_TEXT": "A selection of books with filters by title and category to better explore my reading tastes.",
       "BOOKS_LINK": "View books",
-
       "MOVIES_TITLE": "Movies",
       "MOVIES_TEXT": "Movies that have inspired or entertained me, shown in a visual carousel format.",
       "MOVIES_LINK": "View movies",
-
       "SERIES_TITLE": "Series",
       "SERIES_TEXT": "Series I follow or have finished, also presented in a visual carousel format.",
       "SERIES_LINK": "View series"
     }
   },
-
   "LOGIN": {
     "EYEBROW": "Private access",
     "TITLE": "Login",
@@ -53,30 +48,27 @@
     "PASSWORD_PLACEHOLDER": "••••••••",
     "SUBMIT": "Sign in",
     "ERROR_INVALID": "Invalid credentials",
-    "ERROR_SERVER": "Error connecting to the server"
+    "ERROR_SERVER": "Error connecting to the server",
+    "ERROR_EMAIL": "Enter a valid email",
+    "ERROR_PASSWORD": "Password is required"
   },
-
   "ABOUT": {
     "EYEBROW": "About me",
     "TITLE": "Get to know me a little better",
     "INTRO": "This section summarizes who I am, how I started in technology and what motivates me to keep learning and building projects.",
-
     "CARD1_NUMBER": "01",
     "CARD1_TITLE": "Who I am",
     "CARD1_TEXT1": "I am Abel Constantino and I am especially interested in frontend development, building modern interfaces and creating interactive experiences that combine design and functionality.",
     "CARD1_TEXT2": "I enjoy learning new technologies and constantly improving the way I structure applications, write cleaner code and build projects that reflect both technical and personal sides.",
-
     "CARD2_NUMBER": "02",
     "CARD2_TITLE": "My journey in tech",
     "CARD2_TEXT1": "Step by step I became interested in web development and discovered that I especially liked the visual side of applications: layout, reusable components, animations and interface organization.",
     "CARD2_TEXT2": "Angular has allowed me to work with concepts such as services, guards, interceptors, forms, internationalization and reactive state with observables and signals, helping me build much more complete projects.",
-
     "CARD3_NUMBER": "03",
     "CARD3_TITLE": "What I want to express with this portfolio",
     "CARD3_TEXT1": "This portfolio is not meant to be just a presentation, but also a way to show how I think and how I organize a real Angular project: authentication, protected routes, coherent design, filters, shared components and a carefully crafted visual experience.",
     "CARD3_TEXT2": "It also reflects part of my hobbies and personal tastes, such as games, books, movies and series, so the project has a more personal and close identity."
   },
-
   "GAMES": {
     "EYEBROW": "Personal collection",
     "TITLE": "Games",
@@ -95,7 +87,6 @@
       "STATUS": "Status"
     }
   },
-
   "BOOKS": {
     "EYEBROW": "Personal collection",
     "TITLE": "Books",
@@ -114,7 +105,6 @@
       "STATUS": "Status"
     }
   },
-
   "MOVIES": {
     "EYEBROW": "Personal collection",
     "TITLE": "Movies",
@@ -123,7 +113,6 @@
     "NEXT": "Next",
     "DIRECTOR": "Directed by"
   },
-
   "SERIES": {
     "EYEBROW": "Personal collection",
     "TITLE": "Series",
@@ -132,7 +121,6 @@
     "NEXT": "Next",
     "CREATOR": "Created by"
   },
-
   "CONTACT": {
     "EYEBROW": "Contact",
     "TITLE": "Let's talk",
