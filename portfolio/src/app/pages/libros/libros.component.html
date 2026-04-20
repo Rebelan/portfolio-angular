@@ -1,41 +1,61 @@
+
 <section class="books-page">
   <div class="books-hero">
-    <p class="books-eyebrow">Colección personal</p>
-    <h1 class="books-title">Libros</h1>
+    <p class="books-eyebrow">
+      {{ 'BOOKS.EYEBROW' | translate }}
+    </p>
+
+    <h1 class="books-title">
+      {{ 'BOOKS.TITLE' | translate }}
+    </h1>
+
     <p class="books-description">
-      Una selección de libros que he leído, que estoy leyendo o que todavía tengo pendientes.
+      {{ 'BOOKS.DESCRIPTION' | translate }}
     </p>
   </div>
 
   <div class="filters-card">
     <div class="filters">
       <div class="filter-group">
-        <label for="name">Buscar por título</label>
+        <label for="name">
+          {{ 'BOOKS.FILTER_NAME' | translate }}
+        </label>
+
         <input
           id="name"
           type="text"
-          placeholder="Ej: Dune"
+          [placeholder]="'BOOKS.FILTER_NAME_PLACEHOLDER' | translate"
           [value]="nameFilter()"
           (input)="nameFilter.set($any($event.target).value)"
         />
       </div>
 
       <div class="filter-group">
-        <label for="category">Filtrar por categoría</label>
+        <label for="category">
+          {{ 'BOOKS.FILTER_CATEGORY' | translate }}
+        </label>
+
         <select
           id="category"
           [value]="categoryFilter()"
           (change)="categoryFilter.set($any($event.target).value)"
         >
-          <option value="">Todos</option>
+          <option value="">
+            {{ 'BOOKS.FILTER_ALL' | translate }}
+          </option>
+
           @for (category of categories(); track category) {
-            <option [value]="category">{{ category }}</option>
+            <option [value]="category">
+              {{ category }}
+            </option>
           }
         </select>
       </div>
 
       <div class="filter-actions">
-        <button type="button" (click)="resetFilters()">Reset</button>
+        <button type="button" (click)="resetFilters()">
+          {{ 'BOOKS.RESET' | translate }}
+        </button>
       </div>
     </div>
   </div>
@@ -45,13 +65,14 @@
       <table class="books-table">
         <thead>
           <tr>
-            <th>Título</th>
-            <th>Categoría</th>
-            <th>Autor</th>
-            <th>Año</th>
-            <th>Estado</th>
+            <th>{{ 'BOOKS.TABLE.TITLE' | translate }}</th>
+            <th>{{ 'BOOKS.TABLE.CATEGORY' | translate }}</th>
+            <th>{{ 'BOOKS.TABLE.AUTHOR' | translate }}</th>
+            <th>{{ 'BOOKS.TABLE.YEAR' | translate }}</th>
+            <th>{{ 'BOOKS.TABLE.STATUS' | translate }}</th>
           </tr>
         </thead>
+
         <tbody>
           @for (book of filteredBooks(); track book.id) {
             <tr class="book-row">
@@ -66,7 +87,7 @@
       </table>
     } @else {
       <div class="empty-state">
-        <p>No se encontraron libros con esos filtros.</p>
+        <p>{{ 'BOOKS.EMPTY' | translate }}</p>
       </div>
     }
   </div>

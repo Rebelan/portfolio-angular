@@ -8,6 +8,7 @@ import {
   inject,
   signal
 } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { gsap } from 'gsap';
 
 
@@ -23,7 +24,7 @@ interface VideoGame {
 @Component({
   selector: 'app-videojuegos',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './videojuegos.component.html',
   styleUrl: './videojuegos.component.scss'
 })

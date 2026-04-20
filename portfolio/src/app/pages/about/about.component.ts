@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, inject, OnDestroy } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 import { gsap } from 'gsap';
 
@@ -7,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })

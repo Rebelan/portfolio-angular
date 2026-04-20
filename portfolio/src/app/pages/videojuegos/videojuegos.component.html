@@ -1,41 +1,61 @@
+
 <section class="games-page">
   <div class="games-hero">
-    <p class="games-eyebrow">Colección personal</p>
-    <h1 class="games-title">Videojuegos</h1>
+    <p class="games-eyebrow">
+      {{ 'GAMES.EYEBROW' | translate }}
+    </p>
+
+    <h1 class="games-title">
+      {{ 'GAMES.TITLE' | translate }}
+    </h1>
+
     <p class="games-description">
-      Una selección de juegos que he disfrutado, terminado o que todavía tengo pendientes.
+      {{ 'GAMES.DESCRIPTION' | translate }}
     </p>
   </div>
 
   <div class="filters-card">
     <div class="filters">
       <div class="filter-group">
-        <label for="name">Buscar por nombre</label>
+        <label for="name">
+          {{ 'GAMES.FILTER_NAME' | translate }}
+        </label>
+
         <input
           id="name"
           type="text"
-          placeholder="Ej: Elden Ring"
+          [placeholder]="'GAMES.FILTER_NAME_PLACEHOLDER' | translate"
           [value]="nameFilter()"
           (input)="nameFilter.set($any($event.target).value)"
         />
       </div>
 
       <div class="filter-group">
-        <label for="genre">Filtrar por género</label>
+        <label for="genre">
+          {{ 'GAMES.FILTER_GENRE' | translate }}
+        </label>
+
         <select
           id="genre"
           [value]="genreFilter()"
           (change)="genreFilter.set($any($event.target).value)"
         >
-          <option value="">Todos</option>
+          <option value="">
+            {{ 'GAMES.FILTER_ALL' | translate }}
+          </option>
+
           @for (genre of genres(); track genre) {
-            <option [value]="genre">{{ genre }}</option>
+            <option [value]="genre">
+              {{ genre }}
+            </option>
           }
         </select>
       </div>
 
       <div class="filter-actions">
-        <button type="button" (click)="resetFilters()">Reset</button>
+        <button type="button" (click)="resetFilters()">
+          {{ 'GAMES.RESET' | translate }}
+        </button>
       </div>
     </div>
   </div>
@@ -45,13 +65,14 @@
       <table class="games-table">
         <thead>
           <tr>
-            <th>Título</th>
-            <th>Género</th>
-            <th>Plataforma</th>
-            <th>Año</th>
-            <th>Estado</th>
+            <th>{{ 'GAMES.TABLE.TITLE' | translate }}</th>
+            <th>{{ 'GAMES.TABLE.GENRE' | translate }}</th>
+            <th>{{ 'GAMES.TABLE.PLATFORM' | translate }}</th>
+            <th>{{ 'GAMES.TABLE.YEAR' | translate }}</th>
+            <th>{{ 'GAMES.TABLE.STATUS' | translate }}</th>
           </tr>
         </thead>
+
         <tbody>
           @for (game of filteredGames(); track game.id) {
             <tr class="game-row">
@@ -66,7 +87,7 @@
       </table>
     } @else {
       <div class="empty-state">
-        <p>No se encontraron videojuegos con esos filtros.</p>
+        <p>{{ 'GAMES.EMPTY' | translate }}</p>
       </div>
     }
   </div>

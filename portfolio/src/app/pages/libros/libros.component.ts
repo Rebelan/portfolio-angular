@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, computed, ElementRef, inject, OnDestroy, signal } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { gsap } from 'gsap';
 
 
@@ -16,7 +17,7 @@ interface Book {
 @Component({
   selector: 'app-libros',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './libros.component.html',
   styleUrl: './libros.component.scss'
 })

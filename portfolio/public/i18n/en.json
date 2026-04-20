@@ -111,7 +111,28 @@
     "DESCRIPTION": "A selection of movies that have inspired or entertained me because of their story, direction or atmosphere.",
     "PREV": "Previous",
     "NEXT": "Next",
-    "DIRECTOR": "Directed by"
+    "DIRECTOR": "Directed by",
+    "GENRES": {
+      "SCI_FI": "Science fiction",
+      "ACTION": "Action",
+      "FANTASY": "Fantasy"
+    },
+    "TITLES": {
+      "INTERSTELLAR": "Interstellar",
+      "BLADE_RUNNER_2049": "Blade Runner 2049",
+      "THE_DARK_KNIGHT": "The Dark Knight",
+      "LOTR_RETURN_OF_THE_KING": "The Lord of the Rings: The Return of the King",
+      "LOTR_FELLOWSHIP": "The Lord of the Rings: The Fellowship of the Ring",
+      "DUNE_PART_TWO": "Dune: Part Two"
+    },
+    "DESCRIPTIONS": {
+      "INTERSTELLAR": "An epic journey through space and time in search of hope for humanity.",
+      "BLADE_RUNNER_2049": "A visually stunning sequel that expands the Blade Runner universe with a unique atmosphere.",
+      "THE_DARK_KNIGHT": "One of the most influential superhero films, featuring a legendary performance by the main villain.",
+      "LOTR_RETURN_OF_THE_KING": "One of the greatest fantasy films ever made. Dive into the resolution of the Ring’s journey and its characters in this epic cinematic milestone.",
+      "LOTR_FELLOWSHIP": "The beginning of one of the most important fantasy and adventure sagas in film history.",
+      "DUNE_PART_TWO": "A visual and narrative spectacle that continues Paul Atreides’ story in a vast and hostile universe."
+    }
   },
   "SERIES": {
     "EYEBROW": "Personal collection",

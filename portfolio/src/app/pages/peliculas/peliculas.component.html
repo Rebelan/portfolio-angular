@@ -1,10 +1,15 @@
 <section class="movies-page">
   <div class="movies-hero">
-    <p class="movies-eyebrow">Colección personal</p>
-    <h1 class="movies-title">Películas</h1>
+    <p class="movies-eyebrow">
+      {{ 'MOVIES.EYEBROW' | translate }}
+    </p>
+
+    <h1 class="movies-title">
+      {{ 'MOVIES.TITLE' | translate }}
+    </h1>
+
     <p class="movies-description">
-      Una selección de películas que me han marcado, me han entretenido o me inspiran
-      por su historia, dirección o atmósfera.
+      {{ 'MOVIES.DESCRIPTION' | translate }}
     </p>
   </div>
 
@@ -14,22 +19,37 @@
         @for (movie of movies(); track movie.id) {
           <article class="movie-slide">
             <div class="movie-poster">
-              <img [src]="movie.poster" [alt]="'Portada de ' + movie.title" />
+              <img
+                [src]="movie.poster"
+                [alt]="(movie.titleKey | translate)"
+              />
             </div>
 
             <div class="movie-info">
               <div class="movie-meta-top">
-                <span class="movie-badge">{{ movie.genre }}</span>
-                <span class="movie-year">{{ movie.year }}</span>
+                <span class="movie-badge">
+                  {{ movie.genreKey | translate }}
+                </span>
+
+                <span class="movie-year">
+                  {{ movie.year }}
+                </span>
               </div>
 
-              <h2>{{ movie.title }}</h2>
+              <h2>
+                {{ movie.titleKey | translate }}
+              </h2>
 
-              <p class="movie-director">Dirigida por {{ movie.director }}</p>
-              <p class="movie-duration">{{ movie.duration }}</p>
+              <p class="movie-director">
+                {{ 'MOVIES.DIRECTOR' | translate }} {{ movie.director }}
+              </p>
+
+              <p class="movie-duration">
+                {{ movie.duration }}
+              </p>
 
               <p class="movie-description-text">
-                {{ movie.description }}
+                {{ movie.descriptionKey | translate }}
               </p>
 
               <p class="movie-counter">
@@ -43,7 +63,7 @@
 
     <div class="carousel-controls">
       <button type="button" class="nav-btn" (click)="prev()">
-        Anterior
+        ← {{ 'MOVIES.PREV' | translate }}
       </button>
 
       <div class="carousel-dots">
@@ -53,13 +73,13 @@
             class="dot"
             [class.active]="currentIndex() === i"
             (click)="goTo(i)"
-            [attr.aria-label]="'Ir a ' + movie.title"
+            [attr.aria-label]="movie.titleKey | translate"
           ></button>
         }
       </div>
 
       <button type="button" class="nav-btn" (click)="next()">
-        Siguiente
+        {{ 'MOVIES.NEXT' | translate }} →
       </button>
     </div>
   </div>

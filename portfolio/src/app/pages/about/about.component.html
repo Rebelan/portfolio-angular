@@ -1,75 +1,86 @@
 <section class="about-page">
   <div class="about-hero">
-    <p class="about-eyebrow">Sobre mí</p>
-    <h1 class="about-title">Conoce un poco más sobre mí</h1>
+    <p class="about-eyebrow">
+      {{ 'ABOUT.EYEBROW' | translate }}
+    </p>
+
+    <h1 class="about-title">
+      {{ 'ABOUT.TITLE' | translate }}
+    </h1>
+
     <p class="about-intro">
-      Esta sección resume quién soy, cómo empecé en el mundo de la tecnología
-      y qué me motiva a seguir aprendiendo y creando proyectos.
+      {{ 'ABOUT.INTRO' | translate }}
     </p>
   </div>
 
   <div class="about-cards">
 
-    <!-- CARD 1 -->
+
     <article class="about-card has-image">
       <div class="card-text">
-        <p class="card-number">01</p>
-        <h2>Quién soy</h2>
-        <p>
-          Soy Abel Constantino y me interesa especialmente el desarrollo frontend,
-          la creación de interfaces modernas y la posibilidad de construir
-          experiencias interactivas que mezclen diseño y funcionalidad.
+        <p class="card-number">
+          {{ 'ABOUT.CARD1_NUMBER' | translate }}
         </p>
+
+        <h2>
+          {{ 'ABOUT.CARD1_TITLE' | translate }}
+        </h2>
+
         <p>
-          Me gusta aprender tecnologías nuevas y mejorar constantemente mi forma
-          de estructurar aplicaciones, escribir código más limpio y crear
-          proyectos que reflejen tanto parte técnica como parte personal.
+          {{ 'ABOUT.CARD1_TEXT1' | translate }}
+        </p>
+
+        <p>
+          {{ 'ABOUT.CARD1_TEXT2' | translate }}
         </p>
       </div>
 
       <div class="card-image">
         <img
           src="/images/mi-foto.jpg"
-          alt="Foto personal para la sección about"
+          alt="Foto personal"
         />
       </div>
     </article>
 
-    <!-- CARD 2 -->
+
     <article class="about-card">
       <div class="card-text">
-        <p class="card-number">02</p>
-        <h2>Mi camino con la tecnología</h2>
-        <p>
-          Poco a poco fui interesándome por el desarrollo web y descubrí que
-          me gustaba especialmente la parte visual de las aplicaciones:
-          maquetación, componentes reutilizables, animaciones y organización
-          de interfaces.
+        <p class="card-number">
+          {{ 'ABOUT.CARD2_NUMBER' | translate }}
         </p>
+
+        <h2>
+          {{ 'ABOUT.CARD2_TITLE' | translate }}
+        </h2>
+
         <p>
-          Angular me ha permitido trabajar conceptos como servicios, guards,
-          interceptores, formularios, internacionalización y estado reactivo
-          con observables y signals, lo que me ayuda a construir proyectos
-          mucho más completos.
+          {{ 'ABOUT.CARD2_TEXT1' | translate }}
+        </p>
+
+        <p>
+          {{ 'ABOUT.CARD2_TEXT2' | translate }}
         </p>
       </div>
     </article>
 
-    <!-- CARD 3 -->
+
     <article class="about-card">
       <div class="card-text">
-        <p class="card-number">03</p>
-        <h2>Qué quiero transmitir con este portfolio</h2>
-        <p>
-          Este portfolio no pretende ser solo una presentación, sino una forma
-          de enseñar cómo pienso y cómo organizo un proyecto Angular real:
-          autenticación, rutas protegidas, diseño coherente, filtros,
-          componentes compartidos y una experiencia visual cuidada.
+        <p class="card-number">
+          {{ 'ABOUT.CARD3_NUMBER' | translate }}
         </p>
+
+        <h2>
+          {{ 'ABOUT.CARD3_TITLE' | translate }}
+        </h2>
+
         <p>
-          También refleja parte de mis aficiones y gustos personales, como los
-          videojuegos, los libros, las películas y las series, para que el
-          proyecto tenga una identidad más propia y cercana.
+          {{ 'ABOUT.CARD3_TEXT1' | translate }}
+        </p>
+
+        <p>
+          {{ 'ABOUT.CARD3_TEXT2' | translate }}
         </p>
       </div>
     </article>

@@ -111,7 +111,28 @@
     "DESCRIPTION": "Uma seleção de filmes que me marcaram, me entretiveram ou me inspiram pela sua história, direção ou atmosfera.",
     "PREV": "Anterior",
     "NEXT": "Seguinte",
-    "DIRECTOR": "Dirigido por"
+    "DIRECTOR": "Dirigido por",
+    "GENRES": {
+      "SCI_FI": "Ficção científica",
+      "ACTION": "Ação",
+      "FANTASY": "Fantasia"
+    },
+    "TITLES": {
+      "INTERSTELLAR": "Interstellar",
+      "BLADE_RUNNER_2049": "Blade Runner 2049",
+      "THE_DARK_KNIGHT": "O Cavaleiro das Trevas",
+      "LOTR_RETURN_OF_THE_KING": "O Senhor dos Anéis: O Regresso do Rei",
+      "LOTR_FELLOWSHIP": "O Senhor dos Anéis: A Sociedade do Anel",
+      "DUNE_PART_TWO": "Dune: Parte Dois"
+    },
+    "DESCRIPTIONS": {
+      "INTERSTELLAR": "Uma viagem épica através do espaço e do tempo em busca de uma esperança para a humanidade.",
+      "BLADE_RUNNER_2049": "Uma sequela visualmente impressionante que expande o universo de Blade Runner com uma atmosfera única.",
+      "THE_DARK_KNIGHT": "Um dos filmes de super-heróis mais influentes, com uma interpretação lendária do vilão principal.",
+      "LOTR_RETURN_OF_THE_KING": "Um dos melhores filmes da história do cinema fantástico. Mergulha na resolução da jornada do anel e das suas personagens neste marco épico do cinema.",
+      "LOTR_FELLOWSHIP": "O início de uma das sagas mais importantes da história do cinema fantástico e de aventura.",
+      "DUNE_PART_TWO": "Um espetáculo visual e narrativo que continua a história de Paul Atreides num universo vasto e hostil."
+    }
   },
   "SERIES": {
     "EYEBROW": "Coleção pessoal",
