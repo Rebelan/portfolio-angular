@@ -19,8 +19,6 @@
     0 8px 30px rgba(0, 0, 0, 0.35),
     inset 0 -1px 0 rgba(255, 255, 255, 0.03);
 
-  position: sticky;
-
   &::before {
     content: '';
     position: absolute;
@@ -46,24 +44,69 @@
   gap: 1rem;
 }
 
+/* ===========================
+   Logo / marca izquierda
+   =========================== */
+
 .navbar-left {
   min-width: max-content;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .brand {
-  font-size: 1.08rem;
-  font-weight: 700;
-  color: #f8fafc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   text-decoration: none;
-  letter-spacing: -0.02em;
-  transition: color 0.25s ease, text-shadow 0.25s ease, transform 0.25s ease;
+  line-height: 0;
+
+  padding: 0.2rem;
+  border-radius: 14px;
+
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
 
   &:hover {
-    color: #c78bff;
-    text-shadow: 0 0 10px rgba(89, 0, 255, 0.45);
-    transform: translateY(-1px);
+    transform: translateY(-1px) scale(1.02);
+    background: rgba(255, 255, 255, 0.025);
+    box-shadow:
+      0 0 16px rgba(139, 92, 246, 0.18),
+      0 0 26px rgba(0, 245, 255, 0.08);
+  }
+
+  img {
+    display: block;
+    width: auto;
+    height: clamp(42px, 5vw, 58px);
+    max-width: 160px;
+    object-fit: contain;
+
+    filter:
+      drop-shadow(0 0 10px rgba(139, 92, 246, 0.16))
+      drop-shadow(0 0 18px rgba(0, 245, 255, 0.08));
+
+    transition:
+      transform 0.25s ease,
+      filter 0.25s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.03);
+    filter:
+      drop-shadow(0 0 12px rgba(199, 139, 255, 0.24))
+      drop-shadow(0 0 22px rgba(0, 245, 255, 0.12));
   }
 }
+
+/* ===========================
+   Centro navegación
+   =========================== */
 
 .navbar-center {
   flex: 1;
@@ -151,6 +194,10 @@
   }
 }
 
+/* ===========================
+   Derecha
+   =========================== */
+
 .navbar-right {
   justify-content: flex-end;
   min-width: max-content;
@@ -167,7 +214,10 @@
   }
 }
 
-/* Angular Material button / link */
+/* ===========================
+   Botones Material
+   =========================== */
+
 .navbar-right button[mat-raised-button],
 .navbar-right a[mat-raised-button] {
   border-radius: 999px;
@@ -277,6 +327,10 @@
   }
 }
 
+/* ===========================
+   Responsive
+   =========================== */
+
 @media (max-width: 900px) {
   .navbar {
     flex-direction: column;
@@ -318,7 +372,13 @@
   }
 
   .brand {
-    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .brand img {
+    height: 42px;
+    max-width: 130px;
   }
 
   .navbar-center {
