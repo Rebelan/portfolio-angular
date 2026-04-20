@@ -1,10 +1,16 @@
+
 <section class="series-page">
   <div class="series-hero">
-    <p class="series-eyebrow">Colección personal</p>
-    <h1 class="series-title">Series</h1>
+    <p class="series-eyebrow">
+      {{ 'SERIES.EYEBROW' | translate }}
+    </p>
+
+    <h1 class="series-title">
+      {{ 'SERIES.TITLE' | translate }}
+    </h1>
+
     <p class="series-description">
-      Una selección de series que me han marcado por su historia, personajes,
-      dirección o atmósfera. Una parte importante de mis referencias visuales y narrativas.
+      {{ 'SERIES.DESCRIPTION' | translate }}
     </p>
   </div>
 
@@ -14,23 +20,41 @@
         @for (item of series(); track item.id) {
           <article class="series-slide">
             <div class="series-poster">
-              <img [src]="item.poster" [alt]="'Portada de ' + item.title" />
+              <img
+                [src]="item.poster"
+                [alt]="item.titleKey | translate"
+              />
             </div>
 
             <div class="series-info">
               <div class="series-meta-top">
-                <span class="series-badge">{{ item.genre }}</span>
-                <span class="series-year">{{ item.year }}</span>
+                <span class="series-badge">
+                  {{ item.genreKey | translate }}
+                </span>
+
+                <span class="series-year">
+                  {{ item.year }}
+                </span>
               </div>
 
-              <h2>{{ item.title }}</h2>
+              <h2>
+                {{ item.titleKey | translate }}
+              </h2>
 
-              <p class="series-creator">Creada por {{ item.creator }}</p>
-              <p class="series-seasons">{{ item.seasons }}</p>
-              <p class="series-status">{{ item.status }}</p>
+              <p class="series-creator">
+                {{ 'SERIES.CREATOR' | translate }} {{ item.creator }}
+              </p>
+
+              <p class="series-seasons">
+                {{ item.seasonsCount }} {{ 'SERIES.SEASONS_SUFFIX' | translate }}
+              </p>
+
+              <p class="series-status">
+                {{ item.statusKey | translate }}
+              </p>
 
               <p class="series-description-text">
-                {{ item.description }}
+                {{ item.descriptionKey | translate }}
               </p>
 
               <p class="series-counter">
@@ -43,8 +67,12 @@
     </div>
 
     <div class="carousel-controls">
-      <button type="button" class="nav-btn" (click)="prev()">
-        Anterior
+      <button
+        type="button"
+        class="nav-btn"
+        (click)="prev()"
+      >
+         {{ 'SERIES.PREV' | translate }}
       </button>
 
       <div class="carousel-dots">
@@ -54,13 +82,17 @@
             class="dot"
             [class.active]="currentIndex() === i"
             (click)="goTo(i)"
-            [attr.aria-label]="'Ir a ' + item.title"
+            [attr.aria-label]="item.titleKey | translate"
           ></button>
         }
       </div>
 
-      <button type="button" class="nav-btn" (click)="next()">
-        Siguiente
+      <button
+        type="button"
+        class="nav-btn"
+        (click)="next()"
+      >
+        {{ 'SERIES.NEXT' | translate }} 
       </button>
     </div>
   </div>

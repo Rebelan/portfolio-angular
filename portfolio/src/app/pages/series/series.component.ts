@@ -1,109 +1,109 @@
-import { AfterViewInit, Component, computed, ElementRef, inject, OnDestroy, signal } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  computed,
+  ElementRef,
+  inject,
+  OnDestroy,
+  signal
+} from '@angular/core';
 import gsap from 'gsap';
-
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface Serie {
   id: number;
-  title: string;
-  genre: string;
+  titleKey: string;
+  genreKey: string;
   year: number;
   creator: string;
-  seasons: string;
-  status: string;
-  description: string;
+  seasonsCount: number;
+  statusKey: string;
+  descriptionKey: string;
   poster: string;
 }
-
 
 @Component({
   selector: 'app-series',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './series.component.html',
   styleUrl: './series.component.scss'
 })
 export default class SeriesComponent implements AfterViewInit, OnDestroy {
 
   series = signal<Serie[]>([
-
     {
       id: 1,
-      title: 'Breaking Bad',
-      genre: 'Drama',
+      titleKey: 'SERIES.TITLES.BREAKING_BAD',
+      genreKey: 'SERIES.GENRES.DRAMA',
       year: 2008,
       creator: 'Vince Gilligan',
-      seasons: '5 temporadas',
-      status: 'Vista',
-      description:
-        'Una de las series más influyentes de la televisión moderna, con una evolución narrativa y de personajes espectacular.',
+      seasonsCount: 5,
+      statusKey: 'SERIES.STATUS.WATCHED',
+      descriptionKey: 'SERIES.DESCRIPTIONS.BREAKING_BAD',
       poster: '/images/series/breaking-bad.jpg'
     },
     {
       id: 2,
-      title: 'Dark',
-      genre: 'Ciencia ficción',
+      titleKey: 'SERIES.TITLES.DARK',
+      genreKey: 'SERIES.GENRES.SCI_FI',
       year: 2017,
       creator: 'Baran bo Odar · Jantje Friese',
-      seasons: '3 temporadas',
-      status: 'Vista',
-      description:
-        'Una historia compleja sobre el tiempo, los secretos familiares y el destino, con una atmósfera única y muy cuidada.',
+      seasonsCount: 3,
+      statusKey: 'SERIES.STATUS.WATCHED',
+      descriptionKey: 'SERIES.DESCRIPTIONS.DARK',
       poster: '/images/series/dark.jpg'
     },
     {
       id: 3,
-      title: 'Arcane',
-      genre: 'Animación',
+      titleKey: 'SERIES.TITLES.ARCANE',
+      genreKey: 'SERIES.GENRES.ANIMATION',
       year: 2021,
       creator: 'Christian Linke · Alex Yee',
-      seasons: '2 temporadas',
-      status: 'Vista',
-      description:
-        'Una serie de animación con una calidad visual sobresaliente y una narrativa muy emocional ambientada en el universo de League of Legends.',
+      seasonsCount: 2,
+      statusKey: 'SERIES.STATUS.WATCHED',
+      descriptionKey: 'SERIES.DESCRIPTIONS.ARCANE',
       poster: '/images/series/arcane.jpg'
     },
     {
       id: 4,
-      title: 'Mr. Robot',
-      genre: 'Thriller',
+      titleKey: 'SERIES.TITLES.MR_ROBOT',
+      genreKey: 'SERIES.GENRES.THRILLER',
       year: 2015,
       creator: 'Sam Esmail',
-      seasons: '4 temporadas',
-      status: 'Vista',
-      description:
-        'Una serie intensa y con mucha personalidad visual, centrada en la tecnología, la paranoia y la identidad.',
+      seasonsCount: 4,
+      statusKey: 'SERIES.STATUS.WATCHED',
+      descriptionKey: 'SERIES.DESCRIPTIONS.MR_ROBOT',
       poster: '/images/series/mr-robot.jpg'
     },
     {
       id: 5,
-      title: 'The Last of Us',
-      genre: 'Drama',
+      titleKey: 'SERIES.TITLES.THE_LAST_OF_US',
+      genreKey: 'SERIES.GENRES.DRAMA',
       year: 2023,
       creator: 'Craig Mazin · Neil Druckmann',
-      seasons: '2 temporadas',
-      status: 'Siguiendo',
-      description:
-        'Adaptación sólida y emocionalmente potente, con una gran ambientación y personajes muy bien construidos.',
+      seasonsCount: 2,
+      statusKey: 'SERIES.STATUS.FOLLOWING',
+      descriptionKey: 'SERIES.DESCRIPTIONS.THE_LAST_OF_US',
       poster: '/images/series/the-last-of-us.jpg'
     },
     {
       id: 6,
-      title: 'Attack on Titan',
-      genre: 'Acción',
+      titleKey: 'SERIES.TITLES.ATTACK_ON_TITAN',
+      genreKey: 'SERIES.GENRES.ACTION',
       year: 2013,
       creator: 'Hajime Isayama (obra original)',
-      seasons: '4 temporadas',
-      status: 'Vista',
-      description:
-        'Una serie intensa, épica y cargada de giros argumentales que ha marcado a muchísimos espectadores.',
+      seasonsCount: 4,
+      statusKey: 'SERIES.STATUS.WATCHED',
+      descriptionKey: 'SERIES.DESCRIPTIONS.ATTACK_ON_TITAN',
       poster: '/images/series/attack-on-titan.jpg'
     }
   ]);
 
-
   currentIndex = signal(0);
   currentSeries = computed(() => this.series()[this.currentIndex()]);
   totalSlides = computed(() => this.series().length);
+
   trackTransform = computed(() => {
     return `translateX(-${this.currentIndex() * 100}%)`;
   });
@@ -121,7 +121,6 @@ export default class SeriesComponent implements AfterViewInit, OnDestroy {
   goTo(index: number): void {
     this.currentIndex.set(index);
   }
-
 
   private host = inject(ElementRef<HTMLElement>);
   private ctx?: gsap.Context;

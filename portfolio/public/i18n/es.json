@@ -140,7 +140,35 @@
     "DESCRIPTION": "Una selección de series que me han marcado por su historia, personajes, dirección o atmósfera.",
     "PREV": "Anterior",
     "NEXT": "Siguiente",
-    "CREATOR": "Creada por"
+    "CREATOR": "Creada por",
+    "SEASONS_SUFFIX": "temporadas",
+    "GENRES": {
+      "DRAMA": "Drama",
+      "SCI_FI": "Ciencia ficción",
+      "ANIMATION": "Animación",
+      "THRILLER": "Thriller",
+      "ACTION": "Acción"
+    },
+    "STATUS": {
+      "WATCHED": "Vista",
+      "FOLLOWING": "Siguiendo"
+    },
+    "TITLES": {
+      "BREAKING_BAD": "Breaking Bad",
+      "DARK": "Dark",
+      "ARCANE": "Arcane",
+      "MR_ROBOT": "Mr. Robot",
+      "THE_LAST_OF_US": "The Last of Us",
+      "ATTACK_ON_TITAN": "Attack on Titan"
+    },
+    "DESCRIPTIONS": {
+      "BREAKING_BAD": "Una de las series más influyentes de la televisión moderna, con una evolución narrativa y de personajes espectacular.",
+      "DARK": "Una historia compleja sobre el tiempo, los secretos familiares y el destino, con una atmósfera única y muy cuidada.",
+      "ARCANE": "Una serie de animación con una calidad visual sobresaliente y una narrativa muy emocional ambientada en el universo de League of Legends.",
+      "MR_ROBOT": "Una serie intensa y con mucha personalidad visual, centrada en la tecnología, la paranoia y la identidad.",
+      "THE_LAST_OF_US": "Adaptación sólida y emocionalmente potente, con una gran ambientación y personajes muy bien construidos.",
+      "ATTACK_ON_TITAN": "Una serie intensa, épica y cargada de giros argumentales que ha marcado a muchísimos espectadores."
+    }
   },
   "CONTACT": {
     "EYEBROW": "Contacto",
