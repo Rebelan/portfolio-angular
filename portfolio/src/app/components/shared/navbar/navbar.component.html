@@ -1,29 +1,68 @@
 <header class="navbar">
   <div class="navbar-left">
-    <a class="brand" routerLink="/">Abel Portfolio</a>
+    <a class="brand" routerLink="/">
+      {{ 'NAVBAR.BRAND' | translate }}
+    </a>
   </div>
 
   <nav class="navbar-center">
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      {{ 'NAVBAR.HOME' | translate }}
+    </a>
 
     @if (isLogged()) {
-      <a routerLink="/about" routerLinkActive="active">Sobre mí</a>
-      <a routerLink="/videojuegos" routerLinkActive="active">Videojuegos</a>
-      <a routerLink="/libros" routerLinkActive="active">Libros</a>
-      <a routerLink="/peliculas" routerLinkActive="active">Películas</a>
-      <a routerLink="/series" routerLinkActive="active">Series</a>
-      <a routerLink="/contacto" routerLinkActive="active">Contacto</a>
+      <a routerLink="/about" routerLinkActive="active">
+        {{ 'NAVBAR.ABOUT' | translate }}
+      </a>
+
+      <a routerLink="/videojuegos" routerLinkActive="active">
+        {{ 'NAVBAR.GAMES' | translate }}
+      </a>
+
+      <a routerLink="/libros" routerLinkActive="active">
+        {{ 'NAVBAR.BOOKS' | translate }}
+      </a>
+
+      <a routerLink="/peliculas" routerLinkActive="active">
+        {{ 'NAVBAR.MOVIES' | translate }}
+      </a>
+
+      <a routerLink="/series" routerLinkActive="active">
+        {{ 'NAVBAR.SERIES' | translate }}
+      </a>
+
+      <a routerLink="/contacto" routerLinkActive="active">
+        {{ 'NAVBAR.CONTACT' | translate }}
+      </a>
     }
   </nav>
 
   <div class="navbar-right">
+    <select
+      class="lang-select"
+      [value]="currentLang()"
+      (change)="changeLanguage($any($event.target).value)"
+    >
+      <option value="es">ES</option>
+      <option value="en">EN</option>
+      <option value="pt">PT</option>
+    </select>
+
     @if (isLogged()) {
-      <span class="welcome">Hola, {{ userName() }}</span>
+      <span class="welcome">
+        {{ 'NAVBAR.WELCOME' | translate }}, {{ userName() }}
+      </span>
+
       <button mat-raised-button color="primary" (click)="logout()">
-        Cerrar sesión
+        {{ 'NAVBAR.LOGOUT' | translate }}
       </button>
     } @else {
       <a mat-raised-button color="primary" routerLink="/login">
-        Iniciar sesión
+        {{ 'NAVBAR.LOGIN' | translate }}
       </a>
     }
   </div>

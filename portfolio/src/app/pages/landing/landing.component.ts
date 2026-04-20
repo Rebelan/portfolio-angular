@@ -20,10 +20,6 @@ export default class LandingComponent implements AfterViewInit {
     this.initPreviewAnimations();
   }
 
-
-  
-
-
   private initHeroAnimations(): void {
     const tl = gsap.timeline({
       defaults: {
