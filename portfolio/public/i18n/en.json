@@ -1,0 +1,155 @@
+{
+  "NAVBAR": {
+    "BRAND": "Abel Portfolio",
+    "HOME": "Home",
+    "ABOUT": "About me",
+    "GAMES": "Games",
+    "BOOKS": "Books",
+    "MOVIES": "Movies",
+    "SERIES": "Series",
+    "CONTACT": "Contact",
+    "LOGIN": "Login",
+    "LOGOUT": "Logout",
+    "WELCOME": "Hello"
+  },
+
+  "LANDING": {
+    "EYEBROW": "Personal portfolio · Angular Developer",
+    "TITLE": "Abel Constantino",
+    "SUBTITLE": "Frontend Developer specialized in Angular",
+    "DESCRIPTION": "Welcome to my personal portfolio. Here you will find information about me, my interests and an interactive collection of games, books, movies and series that are part of my world.",
+    "LOGIN": "Login",
+    "EXPLORE": "Explore portfolio",
+    "SCROLL": "Scroll",
+    "PREVIEW_EYEBROW": "What you will find",
+    "PREVIEW_TITLE": "Explore my personal universe",
+    "PREVIEW_DESCRIPTION": "This portfolio not only shows who I am, but also part of my tastes, hobbies and cultural references through different collections.",
+    "CARDS": {
+      "GAMES_TITLE": "Games",
+      "GAMES_TEXT": "A table with the games I have enjoyed, organized by genre and filterable by name and category.",
+      "GAMES_LINK": "View games",
+
+      "BOOKS_TITLE": "Books",
+      "BOOKS_TEXT": "A selection of books with filters by title and category to better explore my reading tastes.",
+      "BOOKS_LINK": "View books",
+
+      "MOVIES_TITLE": "Movies",
+      "MOVIES_TEXT": "Movies that have inspired or entertained me, shown in a visual carousel format.",
+      "MOVIES_LINK": "View movies",
+
+      "SERIES_TITLE": "Series",
+      "SERIES_TEXT": "Series I follow or have finished, also presented in a visual carousel format.",
+      "SERIES_LINK": "View series"
+    }
+  },
+
+  "LOGIN": {
+    "EYEBROW": "Private access",
+    "TITLE": "Login",
+    "DESCRIPTION": "Enter your credentials to access the portfolio.",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "EMAIL_PLACEHOLDER": "admin@gmail.com",
+    "PASSWORD_PLACEHOLDER": "••••••••",
+    "SUBMIT": "Sign in",
+    "ERROR_INVALID": "Invalid credentials",
+    "ERROR_SERVER": "Error connecting to the server"
+  },
+
+  "ABOUT": {
+    "EYEBROW": "About me",
+    "TITLE": "Get to know me a little better",
+    "INTRO": "This section summarizes who I am, how I started in technology and what motivates me to keep learning and building projects.",
+
+    "CARD1_NUMBER": "01",
+    "CARD1_TITLE": "Who I am",
+    "CARD1_TEXT1": "I am Abel Constantino and I am especially interested in frontend development, building modern interfaces and creating interactive experiences that combine design and functionality.",
+    "CARD1_TEXT2": "I enjoy learning new technologies and constantly improving the way I structure applications, write cleaner code and build projects that reflect both technical and personal sides.",
+
+    "CARD2_NUMBER": "02",
+    "CARD2_TITLE": "My journey in tech",
+    "CARD2_TEXT1": "Step by step I became interested in web development and discovered that I especially liked the visual side of applications: layout, reusable components, animations and interface organization.",
+    "CARD2_TEXT2": "Angular has allowed me to work with concepts such as services, guards, interceptors, forms, internationalization and reactive state with observables and signals, helping me build much more complete projects.",
+
+    "CARD3_NUMBER": "03",
+    "CARD3_TITLE": "What I want to express with this portfolio",
+    "CARD3_TEXT1": "This portfolio is not meant to be just a presentation, but also a way to show how I think and how I organize a real Angular project: authentication, protected routes, coherent design, filters, shared components and a carefully crafted visual experience.",
+    "CARD3_TEXT2": "It also reflects part of my hobbies and personal tastes, such as games, books, movies and series, so the project has a more personal and close identity."
+  },
+
+  "GAMES": {
+    "EYEBROW": "Personal collection",
+    "TITLE": "Games",
+    "DESCRIPTION": "A selection of games I have enjoyed, completed or still have pending. You can filter them by name or genre.",
+    "FILTER_NAME": "Search by title",
+    "FILTER_NAME_PLACEHOLDER": "Ex: Elden Ring",
+    "FILTER_GENRE": "Filter by genre",
+    "FILTER_ALL": "All",
+    "RESET": "Reset",
+    "EMPTY": "No games found with those filters.",
+    "TABLE": {
+      "TITLE": "Title",
+      "GENRE": "Genre",
+      "PLATFORM": "Platform",
+      "YEAR": "Year",
+      "STATUS": "Status"
+    }
+  },
+
+  "BOOKS": {
+    "EYEBROW": "Personal collection",
+    "TITLE": "Books",
+    "DESCRIPTION": "A selection of books I have read, am currently reading or still have pending. You can filter them by title or category.",
+    "FILTER_NAME": "Search by title",
+    "FILTER_NAME_PLACEHOLDER": "Ex: Dune",
+    "FILTER_CATEGORY": "Filter by category",
+    "FILTER_ALL": "All",
+    "RESET": "Reset",
+    "EMPTY": "No books found with those filters.",
+    "TABLE": {
+      "TITLE": "Title",
+      "CATEGORY": "Category",
+      "AUTHOR": "Author",
+      "YEAR": "Year",
+      "STATUS": "Status"
+    }
+  },
+
+  "MOVIES": {
+    "EYEBROW": "Personal collection",
+    "TITLE": "Movies",
+    "DESCRIPTION": "A selection of movies that have inspired or entertained me because of their story, direction or atmosphere.",
+    "PREV": "Previous",
+    "NEXT": "Next",
+    "DIRECTOR": "Directed by"
+  },
+
+  "SERIES": {
+    "EYEBROW": "Personal collection",
+    "TITLE": "Series",
+    "DESCRIPTION": "A selection of series that have impacted me because of their story, characters, direction or atmosphere.",
+    "PREV": "Previous",
+    "NEXT": "Next",
+    "CREATOR": "Created by"
+  },
+
+  "CONTACT": {
+    "EYEBROW": "Contact",
+    "TITLE": "Let's talk",
+    "DESCRIPTION": "If you want to write to me, comment on the portfolio or simply say hello, you can do it through this form.",
+    "NAME": "Name",
+    "NAME_PLACEHOLDER": "Your name",
+    "EMAIL": "Email",
+    "EMAIL_PLACEHOLDER": "youremail@mail.com",
+    "MESSAGE": "Message",
+    "MESSAGE_PLACEHOLDER": "Write your message here...",
+    "ACCEPT": "I accept the privacy policy",
+    "SUBMIT": "Send message",
+    "ERROR_NAME": "Name is required (min. 2 characters)",
+    "ERROR_EMAIL": "Enter a valid email",
+    "ERROR_MESSAGE": "Message is required (min. 10 characters)",
+    "ERROR_ACCEPT": "You must accept the privacy policy",
+    "SUCCESS_TITLE": "Message sent",
+    "SUCCESS_TEXT": "Thanks for reaching out. Your message has been successfully registered."
+  }
+}

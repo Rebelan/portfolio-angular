@@ -35,4 +35,9 @@ export const routes: Routes = [
         canActivate: [authGuard],
         loadComponent: () => import('./pages/series/series.component')
     },
+    {
+        path: 'contacto',
+        canActivate: [authGuard],
+        loadComponent: () => import('./pages/contact/contact.component')
+    },
 ];
