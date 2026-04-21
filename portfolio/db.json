@@ -7,6 +7,13 @@
       "email": "admin@gmail.com",
       "password": "admin",
       "role": "user"
+    },
+    {
+      "id": 2,
+      "name": "Abel",
+      "email": "abel@gmail.com",
+      "password": "abel",
+      "role": "user"
     }
   ]
 }
